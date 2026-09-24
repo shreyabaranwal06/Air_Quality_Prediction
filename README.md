@@ -1,7 +1,5 @@
 # Air Quality Prediction
 
-**Live App:** [Open Air Quality Prediction Dashboard](https://shreya-air-quality-prediction.streamlit.app/)
-
 A web application that helps users explore air quality data, understand pollution trends, and generate air quality predictions. Built with Python and Streamlit, it combines an interactive dashboard, data visualizations, machine learning, and downloadable PDF reports.
 
 ## Overview
@@ -109,6 +107,8 @@ This project helped me work with air quality datasets, prepare data for analysis
 - Support more cities and updated datasets.
 - Compare the performance of different prediction models.
 - Add more detailed analysis of individual pollutants.
+
+**Live App:** [Open Air Quality Prediction Dashboard](https://shreya-air-quality-prediction.streamlit.app/)
 
 ## Author
 
