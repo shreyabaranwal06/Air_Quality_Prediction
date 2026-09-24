@@ -93,7 +93,7 @@ with left:
         margin=dict(l=10, r=10, t=20, b=10)
     )
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
 
 # -------------------------
@@ -151,7 +151,7 @@ with right:
         yaxis_title="Average AQI"
     )
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
 st.markdown("---")
 
@@ -183,7 +183,7 @@ with left:
         height=450
     )
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
 with right:
 
@@ -229,7 +229,7 @@ with right:
         height=450
     )
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
 st.markdown("---")
 
@@ -291,7 +291,7 @@ with left:
 
     )
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
 with right:
 
@@ -349,7 +349,7 @@ with left:
         coloraxis_showscale=False
     )
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
 
 # ==========================================
@@ -385,7 +385,7 @@ latest_records = df.tail(5)
 
 st.dataframe(
     latest_records,
-    use_container_width=True,
+    width="stretch",
     hide_index=True
 )
 

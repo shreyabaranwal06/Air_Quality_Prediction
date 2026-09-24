@@ -148,11 +148,11 @@ with top2:
             data=df.to_csv(index=False),
             file_name="AQI_Report.csv",
             mime="text/csv",
-            use_container_width=True
+            width="stretch"
         )
 
     with c3:
-        if st.button("🔔", use_container_width=True):
+        if st.button("🔔", width="stretch"):
             st.toast("No new notifications 🔔")
 
 st.markdown("---")
@@ -257,7 +257,7 @@ fig.update_layout(
         height=420
     )
 
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width="stretch")
 
 st.markdown("---")
 
@@ -298,7 +298,7 @@ with left:
             height=420
         )
 
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
 with right:
 
@@ -322,7 +322,7 @@ with right:
             height=420
         )
 
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
 st.markdown("---")
 
@@ -382,7 +382,7 @@ with left:
 
         )
 
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
 with right:
 
@@ -444,7 +444,7 @@ with left:
 
     st.dataframe(
         history,
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
         height=295
     )
@@ -491,7 +491,7 @@ with right:
         coloraxis_showscale=False
     )
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
     # ==========================================
 # Health Recommendation
@@ -556,7 +556,7 @@ elif selected == "Analytics":
 elif selected == "History":
     st.title("📋 AQI History")
     history_df = df.tail(30)
-    st.dataframe(history_df, use_container_width=True)
+    st.dataframe(history_df, width="stretch")
 
 elif selected == "Report":
 

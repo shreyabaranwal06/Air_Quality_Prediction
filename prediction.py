@@ -28,7 +28,7 @@ with col2:
 
 st.markdown("---")
 
-if st.button("🔮 Predict AQI", use_container_width=True):
+if st.button("🔮 Predict AQI", width="stretch"):
 
     input_df = pd.DataFrame({
         "PM2.5": [pm25],
