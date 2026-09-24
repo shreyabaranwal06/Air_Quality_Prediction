@@ -1,12 +1,23 @@
 import streamlit as st
 import pandas as pd
-import joblib
+
 
 # ==========================
 # Load Model
 # ==========================
 
-model = joblib.load("model/aqi_model.pkl")
+from sklearn.ensemble import RandomForestRegressor
+
+@st.cache_resource
+def load_model():
+    df = pd.read_csv("dataset/clean_air_quality.csv")
+    features = ["PM2.5", "PM10", "NO2", "SO2", "CO", "O3"]
+
+    model = RandomForestRegressor(n_estimators=200, random_state=42)
+    model.fit(df[features], df["AQI"])
+    return model
+
+model = load_model()
 
 st.title("🤖 AI Air Quality Prediction")
 
